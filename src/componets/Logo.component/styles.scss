@@ -1,0 +1,67 @@
+.Logo-Wrapper {
+  display: grid;
+  justify-items: center;
+  position: absolute;
+  margin: 3em auto 0em;
+  width: 100%;
+  z-index: 10;
+  transition: linear 0.5s;
+
+  h1 {
+    background: linear-gradient(to bottom,  #ebf1f6 0%,#abd3ee 50%,#859ee2 51%,#d5ebfb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf1f6', endColorstr='#d5ebfb',GradientType=0 ); /* IE6-9 */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Saira-Bold', sans-serif !important; 
+    font-weight: 700 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 3em;
+    transition: font-size 0.5s;
+    position: absolute;
+    text-transform: uppercase;
+    margin-left: -0.25em;
+
+    &:after {
+      background: none;
+      content: attr(data-text);
+      left: 0;
+      position: absolute;
+      text-shadow: 1px -1px 0 rgba(255,255,255,0.5),
+        3px 1px 3px rgba(16, 164, 213,0.85), 
+        -3px -2px 3px rgba(0,0,255,0.85),
+        1px -2px 0 rgba(255,255,255,0.8);
+      z-index: -1;
+    }
+
+    &:before {
+      content: ' ';
+      position: absolute;
+      top: -1em;
+      left: 0;
+      width: 3em;
+      height: 6.7em;
+      background: url('../../assets/images/v-logo.svg') no-repeat;
+      background-size: 7.5em;
+      width: 100%;
+      z-index: -4;
+      margin-left: .74em;
+    }
+  }  
+
+  h2 {
+    text-shadow: 1px -1px 0 rgba(255,255,255,0.5),
+      2px 1px 2px rgba(255, 118, 255, 0.85), 
+      -3px -2px 3px rgba(88, 1, 88, 0.85),
+      1px -2px 0 rgba(255,255,255,0.8);
+    color: rgb(247, 91, 247);
+    font-size: 2em;
+    transform: rotateZ(-15deg);
+    position: absolute;
+    font-family: 'Courgette-Regular', cursive;
+    transition: font-size 0.5s;
+    margin-top: 3em;
+    text-decoration: underline;
+  }
+}

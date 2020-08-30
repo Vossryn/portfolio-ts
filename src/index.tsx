@@ -1,13 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { responsiveFontSizes, ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import 'fontsource-roboto';
+
+import App from './App'
+
+import './index.scss';
+
+import Theme from "./helpers/ui";
+
 import * as serviceWorker from './serviceWorker';
 
+let newTheme = responsiveFontSizes(Theme);
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <React.Fragment>
+    <ThemeProvider theme={newTheme}>
+      <CssBaseline />
+      <App />
+    </ThemeProvider>
+  </React.Fragment>,
   document.getElementById('root')
 );
 

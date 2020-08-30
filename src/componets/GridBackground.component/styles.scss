@@ -1,0 +1,46 @@
+.Grid-Container {
+  overflow: hidden;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  .Grid-Container-Overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: rgba(48,48,48,0);
+    background: -moz-linear-gradient(top, rgba(48,48,48,0) 65%, rgba(48,48,48,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(65%, rgba(48,48,48,0)), color-stop(100%, rgba(48,48,48,1)));
+    background: -webkit-linear-gradient(top, rgba(48,48,48,0) 65%, rgba(48,48,48,1) 100%);
+    background: -o-linear-gradient(top, rgba(48,48,48,0) 65%, rgba(48,48,48,1) 100%);
+    background: -ms-linear-gradient(top, rgba(48,48,48,0) 65%, rgba(48,48,48,1) 100%);
+    background: linear-gradient(to bottom, rgba(48,48,48,0) 65%, rgba(48,48,48,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=0 );
+  }
+
+  .Grid-Lines{
+    opacity: 0.7;
+    border-top: 1px solid #10a3d3;
+    height: 100%;
+    background-size: 40px 40px;
+    background-image:
+      linear-gradient(to right, #10a3d3 2px, transparent 1px),
+      linear-gradient(to bottom, #10a3d3 2px, transparent 1px);
+    perspective: 1000px;
+    transform: perspective(430px) rotateX(45deg) scale(3);
+    margin-top: 10em;
+    box-shadow: 0px -90px 400px 80px rgba(16, 164, 213,0.45);
+
+    &:after {
+      box-shadow: 0px -90px 400px 80px rgba(16, 164, 213,0.45);
+      z-index: 10;
+    }
+  }
+}
